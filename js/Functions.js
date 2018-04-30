@@ -1,5 +1,8 @@
 
 
+var draw_button = document.getElementById('draw');
+var save_button = document.getElementById('save');
+save_button.style.display = "none";
 var canvas = document.getElementById('Parking');
 var context = canvas.getContext('2d');
 context.lineWidth = 2;
@@ -33,7 +36,7 @@ canvas.addEventListener('mousedown', savecoord);
 function savecoord(evt){
 	if (stack < 4){
 		Xpos = evt.pageX - canvas.offsetLeft - 210;
-		Ypos = evt.pageY - canvas.offsetTop - 84;
+		Ypos = evt.pageY - canvas.offsetTop - 94;
 		corners_X[stack] = Xpos;
 		corners_Y[stack] = Ypos;
 		context.fillStyle = "#CA0000";
@@ -69,6 +72,8 @@ function recreate(data){
 			}
 		}
 	}
+	draw_button.style.display = "block";
+	save_button.style.display = "none";
 }
 
 function erase(){
@@ -135,6 +140,9 @@ function draw(){
 		console.log(id)
 		console.log(corners_X)
 		console.log(corners_Y)
+
+		draw_button.style.display = "none";
+		save_button.style.display = "block";
 		
 		
 	}else{
@@ -175,6 +183,9 @@ function updata(){
 		corners_Y = [0,0,0,0];
 		corners_X = [0,0,0,0];
 		document.getElementById("ParkingID").value = 0;
+		draw_button.style.display = "block";
+		save_button.style.display = "none";
+
 
       }
     });

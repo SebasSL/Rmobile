@@ -1,3 +1,5 @@
+
+
 html {
 	height: 100% !important;
 }
@@ -55,11 +57,18 @@ body {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    font: 14px helvetica;
+    -webkit-transition: all 0.4s ease-in-out;
+	-moz-transition: all 0.4s ease-in-out;
+	-o-transition: all 0.4s ease-in-out;
+	-ms-transition: all 0.4s ease-in-out;
+	transition: all 0.4s ease-in-out;
 }
 
 .navlist li a:hover:not(.active) {
 	color: white;
 	background-color: #0000b7;
+
 }
 
 .navlist li a.active {
@@ -71,9 +80,15 @@ body {
     .navlist li.nav-left ,.navlist li.nav-right {float: none;}
 }
 
+.pk-title{
+	color: #0000b7;
+	font: 22px helvetica;
+}
+
+
 section
 {
-	padding-top: 20px;
+	padding-top: 10px;
 	padding-bottom: 20px;
 
 }
@@ -87,17 +102,54 @@ section
 
 #action
 {
-	margin: 10px auto 0px;
+	margin: 0px;
 }
 
 #action button
 {
+
 	width: 60%;
-	height: 50px;
+	height: 30px;
 	margin-top: 5px;
-	background: #67BCFD;
-	color: white;
-	font: 25px impact;
+	margin-bottom: 5px;
+	background: white;
+	color: #0000b7;
+	font: 16px helvetica;
 	cursor: pointer;
+	border: none;
+	-webkit-transition: all 0.4s ease-in-out;
+	-moz-transition: all 0.4s ease-in-out;
+	-o-transition: all 0.4s ease-in-out;
+	-ms-transition: all 0.4s ease-in-out;
+	transition: all 0.4s ease-in-out;
+
 }
 
+#action button.save-button{
+	color: #4CAF50;
+}
+
+#action button:hover {
+	background-color: #0000b7;
+	color: white;
+}
+
+#action button.save-button:hover{
+	background-color: #4CAF50;
+	color: white;
+}
+
+#action input[type=text]{
+	border: 3px solid grey;
+	width: 60%;
+	margin-top: 5px;
+	-webkit-transition: all 0.4s ease-in-out;
+	-moz-transition: all 0.4s ease-in-out;
+	-o-transition: all 0.4s ease-in-out;
+	-ms-transition: all 0.4s ease-in-out;
+	transition: all 0.4s ease-in-out;
+}
+
+#action input[type=text]:focus{
+	border: 5px solid #0000b7;
+}
