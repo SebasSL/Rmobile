@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+
+		<title>Eye in the sky</title>
+		<meta name="description" content="Eye in the sky project">
+	    <meta name="author" content="Sebastian Salas">
+		<link rel="stylesheet" href="css/style.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="utf-8">
+	  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>	
+
+	</head>
+
+	<body>
+		<header id="header" class="header-main">
+			<nav id="navbar-init" class="navbar" >
+				<div class="navbar-cont">
+					<ul class="navlist">
+						<li class="navbar-logo nav-left"></li>
+						<li class="nav-right"><a href="#about">About</a></li>
+					  	<li class="nav-right"><a href="#new">New Parkinglot</a></li>
+					  	<li class="nav-right"><a class="active" href="#self">Parkinglots</a></li>
+						<li class="nav-right"><a href="index.html">Home</a></li>
+					</ul>
+				</div>
+			</nav>
+		</header>
+		<br>
+		<br>
+		<br><!-- = 20px-->
+		<section>
+			<div class="row">
+				<div id="action" class="col-md-2">
+					<center>
+						<button id="draw" onclick="draw()">Draw</button>
+						<button onclick="erase()">Undo</button>
+						<button onclick="updata()">Save</button>
+						<input type="text" id="ParkingID" value="0">	
+					</center>
+				</div>
+				<div class="col-md-10">
+					<canvas id="Parking" ></canvas>
+				</div>
+			</div>
+		</section>
+
+	</body>
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/Functions.js"></script>
+</html>	

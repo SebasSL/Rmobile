@@ -1,0 +1,103 @@
+html {
+	height: 100% !important;
+}
+body {
+	position: relative;
+	height: 100%;
+	font-size: 14px;
+	color: #363940;
+	margin: 0;
+}
+
+#header {
+	height: 0px; 
+}
+
+.navbar {
+	margin: 0;
+	border: none;
+
+}
+
+.navbar .navbar-cont {
+	padding-top: 5px;
+	padding-left: 50px;
+	padding-right: 50px;
+}
+
+.navbar-logo{
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-size: 100% 100%;
+	width: 182px;
+	height: 48px; 
+	background-image: url(../images/logo2.png);
+}
+
+.navbar-list{
+	width: 600px;
+	height: auto;
+	padding: 24px 0;
+}
+.navlist {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.navlist li.nav-left {float: left;}
+.navlist li.nav-right{float: right;}
+
+.navlist li a {
+    display: block;
+    color: #878889;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navlist li a:hover:not(.active) {
+	color: white;
+	background-color: #0000b7;
+}
+
+.navlist li a.active {
+	color: white;
+	background-color: #4CAF50;
+}
+
+@media screen and (max-width: 600px){
+    .navlist li.nav-left ,.navlist li.nav-right {float: none;}
+}
+
+section
+{
+	padding-top: 20px;
+	padding-bottom: 20px;
+
+}
+
+#Parking
+{
+	display: block;
+	border: 1px solid blue;
+	
+}
+
+#action
+{
+	margin: 10px auto 0px;
+}
+
+#action button
+{
+	width: 60%;
+	height: 50px;
+	margin-top: 5px;
+	background: #67BCFD;
+	color: white;
+	font: 25px impact;
+	cursor: pointer;
+}
+
