@@ -22,14 +22,33 @@ var tablename;
 var rawcoordsX;
 var rawcoordsY;
 
-
 $(document).ready(function(){
-	$("canvas").css({"background-image": "url(images/Escenario1.jpg)"}); 
+	var queryString = decodeURIComponent(window.location.search);
+	queryString = queryString.substring(4);
+	$.ajax({
+      url: "initdata.php",
+      method: "POST",
+      data: {
+      	ParkingID: queryString
+      },
+      cache: false,
+      success: function(data) {
+      	init_data = $.parseJSON(data);
+      	setcanvas(init_data)
+      }
+    });
 });
-	
-canvas.width = 1000;
-canvas.height = 620;
 
+function setcanvas(data){
+
+	$("canvas").css({"background-image": "url(images/init_images/"+data[2]+")"}); 
+	var res = data[1].split(",");
+	canvas.width = res[0];
+	canvas.height = res[1];
+	tablename = data[0];
+	document.getElementById("pktitle").innerHTML = data[0];
+	recreate();
+}
 
 canvas.addEventListener('mousedown', savecoord);
 
@@ -49,29 +68,43 @@ function savecoord(evt){
 }
 
 
-function recreate(data){
+function recreate(){
+	
+	$.ajax({
+      url: "recreate.php",
+      method: "POST",
+      data: {
+      	tablename: tablename
+      },
+      cache: false,
+      success: function(rawdata) {
 
-	for (var k = 0; k < data[0].length; k++){
+      	data = $.parseJSON(rawdata);
+		
+		for (var k = 0; k < data[0].length; k++){
 
-		rawcoordsX = data[1][k].split(",");
-		rawcoordsY = data[2][k].split(",");
+			rawcoordsX = data[1][k].split(",");
+			rawcoordsY = data[2][k].split(",");
 
-		for (var j = 0; j <= 3; j++){
+			for (var j = 0; j <= 3; j++){
+					
+				start_X = parseInt(rawcoordsX[j]);
+				start_Y = parseInt(rawcoordsY[j]);
+
+				for (var i = 0; i <= 3-j ; i++) {
+
+					context.beginPath();
+					context.moveTo(start_X , start_Y);
+					context.lineTo(parseInt(rawcoordsX[i+j]),parseInt(rawcoordsY[i+j]));
+					context.strokeStyle = "#FF0000";
+					context.stroke();
 				
-			start_X = parseInt(rawcoordsX[j]);
-			start_Y = parseInt(rawcoordsY[j]);
-
-			for (var i = 0; i <= 3-j ; i++) {
-
-				context.beginPath();
-				context.moveTo(start_X , start_Y);
-				context.lineTo(parseInt(rawcoordsX[i+j]),parseInt(rawcoordsY[i+j]));
-				context.strokeStyle = "#FF0000";
-				context.stroke();
-			
+				}
 			}
 		}
-	}
+      }
+    });
+	
 	draw_button.style.display = "block";
 	save_button.style.display = "none";
 }
@@ -86,30 +119,13 @@ function erase(){
 		corners_Y = [0,0,0,0];
 		corners_X = [0,0,0,0];
 	}else{
-		tablename = "Parkinglot1"
-
-		$.ajax({
-	      url: "recreate.php",
-	      method: "POST",
-	      data: {
-	      	tablename: tablename
-	      },
-	      cache: false,
-	      success: function(data) {
-
-	      	rec_data = $.parseJSON(data);
-	      	console.log(rec_data[1][0])
-	      	console.log(rec_data[0])
-			context.clearRect(0, 0, canvas.width, canvas.height);
-
-			recreate(rec_data);
-	      }
-	    });
-
+		
 	    stack = 0;
 		corners_Y = [0,0,0,0];
 		corners_X = [0,0,0,0];
 		document.getElementById("ParkingID").value = 0;
+		context.clearRect(0, 0, canvas.width, canvas.height);
+		recreate();
 	}
 }
 
@@ -167,14 +183,15 @@ function updata(){
 		console.log(corX)
 	}
 	
-
+	alert(tablename)
 	$.ajax({
       url: "data_up.php",
       method: "POST",
       data: {
       	ParkingID: id,
       	CoordX: corX,
-      	CoordY: corY
+      	CoordY: corY,
+      	tablename: tablename
       },
       cache: false,
       success: function(data) {

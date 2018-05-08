@@ -26,7 +26,6 @@ $("#upload").click(function(){
         },
         cache: false,
         success: function(data){
-        	alert(data);
         	image_up(form_data);
         },
     });

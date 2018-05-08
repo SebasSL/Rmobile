@@ -25,6 +25,10 @@ if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg
  $uploadOk = 0;
 }
 
+$sql = "UPDATE `Parkinglots` SET `Format` = '".$imageFileType."' WHERE `Parkinglots`.`ID` ='".$ID."'";
+mysqli_query($connect, $sql);
+
+
 if($uploadOk == 0){
  echo 0;
 }else{

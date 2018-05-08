@@ -11,7 +11,7 @@ $output = "";
 $table_name = $name.$ID;
 
 //Crear tabla
-$sql = "CREATE TABLE ".$table_name." ( ID INT(6) UNSIGNED PRIMARY KEY, CoorX VARCHAR(30) NOT NULL, CoordY VARCHAR(30) NOT NULL)";
+$sql = "CREATE TABLE ".$table_name." ( ID INT(6) UNSIGNED PRIMARY KEY, CoordX VARCHAR(30) NOT NULL, CoordY VARCHAR(30) NOT NULL)";
 mysqli_query($connect, $sql);
 
 $sqli = "INSERT INTO `Parkinglots`(`ID`, `Name`, `Resolution`, `Date` ) VALUES ( '".$ID."' , '".$name."' , '".$resolution."', NOW())";

@@ -15,7 +15,8 @@ while($rs = $result->fetch_assoc()) {
     $outp .= '{"Name":"'  . $rs["Name"] . '",';
     $outp .= '"ID":"'   . $rs["ID"]        . '",';
     $outp .= '"Date":"'   . $rs["Date"]        . '",';
-    $outp .= '"Resolution":"'. $rs["Resolution"]     . '"}'; 
+    $outp .= '"Resolution":"'   . $rs["Resolution"]        . '",';
+    $outp .= '"Format":"'. $rs["Format"]     . '"}'; 
 }
 $outp .="]";
 

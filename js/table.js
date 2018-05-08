@@ -24,7 +24,9 @@ function writetable(data){
     out += "<tr><th>Parkinglot Name</th>";
     out += "<th>Parkinglot ID</th>";
     out += "<th>Creation Date</th>";
-    out += "<th>Image Resolution</th></tr>";
+    out += "<th>Image Resolution</th>";
+    out += "<th>Image Format</th>";
+    out += "<th>Actions</th></tr>";
 
     for(i = 0; i < arr.length; i++) {
         out += "<tr><td>" +
@@ -35,8 +37,15 @@ function writetable(data){
         arr[i].Date +
         "</td><td>" +
         arr[i].Resolution +
+        "</td><td>" +
+        arr[i].Format +
+        '</td><td><button onclick="goto('+arr[i].ID+')">SELECT</button>'+
         "</td></tr>";
     }
     out += "</table>";
     document.getElementById("pklot-table").innerHTML = out;
+}
+
+function goto(data){
+    window.location.href = 'config.html?id='+data;
 }

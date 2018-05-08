@@ -38,7 +38,7 @@
 			<div class="row">
 				<div id="action" class="col-md-2">
 					<center>
-						<h3 class="pk-title" id="pktitle"></h3>
+						<h3 class="pk-title">Parkinglot1</h3>
 						<button id="draw" onclick="draw()"><i class="fa fa-paint-brush"></i> Draw</button>
 						<button id="save" class="save-button" onclick="updata()"><i class="fa fa-save"></i> Save</button> 
 						<button onclick="erase()"><i class="fa fa-undo"></i> Undo</button>

@@ -81,8 +81,10 @@ body {
 }
 
 .pk-title{
-	color: #0000b7;
+	color: white;
 	font: 22px helvetica;
+	text-align: center;
+	margin-bottom: 25px; 
 }
 
 
@@ -90,7 +92,15 @@ section
 {
 	padding-top: 10px;
 	padding-bottom: 20px;
+	padding-left: 20px;
+}
 
+.home{
+
+	width: 318px;
+	height: 159px;
+	margin: 50px auto 0px;
+	background-image: url(../images/const.jpeg);
 }
 
 #Parking
@@ -101,8 +111,17 @@ section
 }
 
 #action
-{
-	margin: 0px;
+{	
+	margin-left: 0px;
+	padding-left: 10px;
+	padding-bottom: 20px;
+	border-radius: 4px;
+    background: -moz-linear-gradient(top,   #eee 0%,#eee 70%,#0000b7 70%,#0000b7 100%); /* FF3.6+ */
+    background: -webkit-linear-gradient(top,  #eee 0%,#eee 70%,#0000b7 70%,#0000b7 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,   #eee 0%,#eee 70%,#0000b7 70%,#0000b7 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,   #eee 0%,#eee 70%,#0000b7 70%,#0000b7 100%); /* IE10+ */
+    background: linear-gradient(to top,   #eee 0%,#eee 70%,#0000b7 70%,#0000b7 100%); /* W3C */
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);	
 }
 
 #action button
@@ -112,7 +131,7 @@ section
 	height: 30px;
 	margin-top: 5px;
 	margin-bottom: 5px;
-	background: white;
+	background: none;
 	color: #0000b7;
 	font: 16px helvetica;
 	cursor: pointer;
@@ -140,7 +159,7 @@ section
 }
 
 #action input[type=text]{
-	border: 3px solid grey;
+	border: 3px solid #bbb;
 	width: 60%;
 	margin-top: 5px;
 	-webkit-transition: all 0.4s ease-in-out;
@@ -151,7 +170,7 @@ section
 }
 
 #action input[type=text]:focus{
-	border: 5px solid #0000b7;
+	border: 3px solid #0000b7;
 }
 
 .form-newpklot{
@@ -233,10 +252,11 @@ section
 	
 }
 #pklot-table td, #pklot-table th {
-    border: 1px solid #ddd;
+	text-align: center;
+    border: none;
     padding: 8px;
+    font: helvetica;
 }
-
 #pklot-table tr:nth-child(even){background-color: white;}
 
 #pklot-table tr:hover {background-color: #c4dcff;}
@@ -247,3 +267,24 @@ section
     text-align: left;
     background-color: #0000b7;
     color: white;
+}
+
+#pklot-table button {
+	width: 100%;
+	height: 100%;
+	background: none;
+	color: #0000b7;
+	font: helvetica;
+	cursor: pointer;
+	border: none;
+	-webkit-transition: all 0.4s ease-in-out;
+	-moz-transition: all 0.4s ease-in-out;
+	-o-transition: all 0.4s ease-in-out;
+	-ms-transition: all 0.4s ease-in-out;
+	transition: all 0.4s ease-in-out;
+}
+
+#pklot-table button:hover {
+	background-color: #0000b7;
+	color: white;
+}
