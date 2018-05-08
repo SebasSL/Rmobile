@@ -33,7 +33,7 @@ body {
 	background-size: 100% 100%;
 	width: 182px;
 	height: 48px; 
-	background-image: url(../images/logo2.png);
+	background-image: url(../images/logo.png);
 }
 
 .navbar-list{
@@ -153,3 +153,97 @@ section
 #action input[type=text]:focus{
 	border: 5px solid #0000b7;
 }
+
+.form-newpklot{
+	width: 50%;
+	padding: 35px;
+	margin: 20px auto 0px;
+	border-radius: 2px;
+	background-color: #eee;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.form-newpklot input[type=text]{
+	width: 100%;
+	margin-top: 10px;
+	margin-bottom: 15px;
+    padding: 12px 20px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 2px;	
+    box-sizing: border-box;
+	-webkit-transition: all 0.4s ease-in-out;
+	-moz-transition: all 0.4s ease-in-out;
+	-o-transition: all 0.4s ease-in-out;
+	-ms-transition: all 0.4s ease-in-out;
+	transition: all 0.4s ease-in-out;
+}
+
+.form-newpklot input[type=text]:focus{
+	border-color: #0000b7;
+}
+
+.form-newpklot button{
+	width: 30%;
+	padding: 15px;
+	margin: 10px auto;
+    display: inline-block;
+    border-radius: 2px;	
+    box-sizing: border-box;
+    border: none;
+    background-color: #0000b7;
+    font: 16px helvetica;
+    color: white;
+	-webkit-transition: all 0.4s ease-in-out;
+	-moz-transition: all 0.4s ease-in-out;
+	-o-transition: all 0.4s ease-in-out;
+	-ms-transition: all 0.4s ease-in-out;
+	transition: all 0.4s ease-in-out;
+}
+
+.form.newpklot input[type=submit]:hover{
+	background-color: #000072;
+}
+
+.form.newpklot input[type=file]{
+	width: 30%;
+	margin: 10px auto;
+    display: inline-block;
+    border-radius: 2px;	
+    box-sizing: border-box;
+    background-color: #0000b7;
+	-webkit-transition: all 0.4s ease-in-out;
+	-moz-transition: all 0.4s ease-in-out;
+	-o-transition: all 0.4s ease-in-out;
+	-ms-transition: all 0.4s ease-in-out;
+	transition: all 0.4s ease-in-out;
+}
+
+#pklot-table {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 60%;
+	padding: 35px;
+	margin: 20px auto 0px;
+	border-radius: 2px;
+	background-color: #eee;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+#pklot-table table{
+	margin: 5px auto 0px;
+	
+}
+#pklot-table td, #pklot-table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#pklot-table tr:nth-child(even){background-color: white;}
+
+#pklot-table tr:hover {background-color: #c4dcff;}
+
+#pklot-table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #0000b7;
+    color: white;

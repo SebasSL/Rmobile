@@ -23,13 +23,32 @@
 						<li class="navbar-logo nav-left"></li>
 						<li class="nav-right"><a href="#about">About</a></li>
 					  	<li class="nav-right"><a class="active" href="#new">New Parkinglot</a></li>
-					  	<li class="nav-right"><a href="config.html">Parkinglots</a></li>
+					  	<li class="nav-right"><a href="parkinglots.html">Parkinglots</a></li>
 						<li class="nav-right"><a href="index.html">Home</a></li>
 					</ul>
 				</div>
 			</nav>
 		</header>
+		<br>
+		<br>
+		<hr>
+		<section>
+			<div class="form-newpklot">	
+				<label for="pklotname">ParkingLot name</label><br>
+				<input type="text" name="pklotname" id="pklotname" placeholder="name..."><br>
+				<label for="pklotID">ParkingLot ID </label><br>
+				<input type="text" name="pklotID" id="pklotID" placeholder="ID...">	<br>
+				<label for="resolution">Resolution </label><br>
+				<input type="text" name="res" id="resolution" placeholder="width,height..."><br>	
+				<label for="pklotImage">Upload Image</label><br>
+				<input type="file" name="pklotImage" id="pklotImage" accept="image/*"><br>
+				<center><button id="upload" >submit</button></center>
+			</div>
+		</section>
+
 	</body>
 
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="js/new_pklot_functions.js"></script>
 
 </html>

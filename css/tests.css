@@ -1,0 +1,35 @@
+/* Container */
+.container{
+    margin: 0 auto;
+    border: 0px solid black;
+    width: 50%;
+    height: 250px;
+    border-radius: 3px;
+    background-color: ghostwhite;
+    text-align: center;
+}
+.container h1{
+    background-color: cornflowerblue;
+    color: white;
+    font-weight: normal;
+    margin-top: 0px;
+    padding: 15px 5px;
+    text-align: center;
+}
+
+/* file */
+#file{
+    border: 2px solid gray;
+    border-radius: 3px;
+    color: black;
+    padding: 10px 5px;
+}
+
+/* Button */
+.button{
+    border: 0px;
+    background-color: deepskyblue;
+    color: white;
+    padding: 5px 15px;
+    margin-left: 10px;
+}
