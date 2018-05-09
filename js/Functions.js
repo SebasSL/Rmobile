@@ -54,7 +54,7 @@ canvas.addEventListener('mousedown', savecoord);
 
 function savecoord(evt){
 	if (stack < 4){
-		Xpos = evt.pageX - canvas.offsetLeft - 210;
+		Xpos = evt.pageX - canvas.offsetLeft - 227;
 		Ypos = evt.pageY - canvas.offsetTop - 94;
 		corners_X[stack] = Xpos;
 		corners_Y[stack] = Ypos;
