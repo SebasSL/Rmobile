@@ -1,6 +1,5 @@
 <?php
-$connect = mysqli_connect('localhost','sebRM','sebrm', 'Rumbomobile');
-
+$connect = mysqli_connect('localhost','Sebrm','Io274as', 'Rumbomobile');
 
 $table = $_POST["tablename"];
 

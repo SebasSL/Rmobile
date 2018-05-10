@@ -1,7 +1,6 @@
 <?php
 
-$connect = mysqli_connect('localhost','sebRM','sebrm', 'Rumbomobile');
-
+$connect = mysqli_connect('localhost','Sebrm','Io274as', 'Rumbomobile');
 
 $name       = $_POST["name"];
 $ID         = $_POST["ID"];

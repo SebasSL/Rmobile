@@ -1,6 +1,5 @@
 <?php
-$connect = mysqli_connect('localhost','sebRM','sebrm', 'Rumbomobile');
-
+$connect = mysqli_connect('localhost','Sebrm','Io274as', 'Rumbomobile');
 
 $ID = $_POST["ParkingID"];
 //$ID = 1;

@@ -3,8 +3,7 @@
 header("Content-Type: application/json; charset=UTF-8");
 
 
-$connect = mysqli_connect('localhost','sebRM','sebrm', 'Rumbomobile');
-
+$connect = mysqli_connect('localhost','Sebrm','Io274as', 'Rumbomobile');
 
 $sql = "SELECT * FROM Parkinglots";
 $result = mysqli_query($connect, $sql);
