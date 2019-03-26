@@ -1,0 +1,4 @@
+Log: day1
+-> pic: 17 - mistakes: 1 - thresh : 0.65
+
+pklots: 147 - ssim: 0.6571
